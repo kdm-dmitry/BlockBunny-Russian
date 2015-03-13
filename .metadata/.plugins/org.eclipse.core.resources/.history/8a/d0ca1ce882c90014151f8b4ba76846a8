@@ -1,0 +1,29 @@
+package GameStates;
+
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+import GameApp.Game;
+
+public abstract class GameState {
+
+	protected Game game;
+	protected GameStateManager gameStateManager;
+	
+	protected SpriteBatch spriteBatch;
+	protected OrthographicCamera cam;
+	protected OrthographicsCamera hudCam;
+	
+	protected GameState (GameStateManager gameStateManager) {
+		this.gameStateManager = gameStateManager;
+		game = gameStateManager.getGame();
+		spriteBatch = gameStateManager.getSpriteBatch();
+		cam = gameStateManager.getCamera();
+		hudCam = gameStateManager.getHudCamera();
+	}
+	
+	public abstract void render ();
+	public abstract void update (float dt);
+	public abstract void handleInput ();
+	public abstract void dispose ();
+}

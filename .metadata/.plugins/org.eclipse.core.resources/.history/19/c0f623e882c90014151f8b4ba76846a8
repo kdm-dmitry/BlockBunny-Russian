@@ -1,0 +1,35 @@
+package GameApp;
+
+import com.badlogic.gdx.ApplicationListener;
+
+public class Game implements ApplicationListener {
+
+	public static final String TITLE = "Block Bunny";
+	public static int WIDTH = 320;
+	public static int HEIGHT = 240;
+	
+	public void create () {
+	
+	}
+	
+	public void render () {
+		
+	}
+	
+	public void dispose () {
+		
+	}
+	
+	public void resume () {
+		
+	}
+	
+	public void pause () {
+				
+	}
+	
+	public void resize (int w, int h) {
+		
+	}
+	
+}
